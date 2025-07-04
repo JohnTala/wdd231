@@ -1,11 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maroune's Courses</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
-    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis iusto libero dolore quisquam! Ex ducimus dolorum quas, esse vitae repudiandae omnis obcaecati consequuntur porro minus error magnam eveniet facilis?</span><span>Numquam recusandae ex tempore omnis! Labore quo quas sequi sapiente maiores optio placeat ipsam recusandae aliquam quis? Impedit pariatur ratione assumenda voluptatibus? Corporis fugit iure, fugiat deserunt consectetur provident nisi.</span><span>Facilis omnis reprehenderit modi, magni voluptates adipisci eius! Eos placeat quibusdam sapiente repellendus, sunt tempore nobis quam dolor, ut autem amet voluptatibus mollitia dolorum quasi fugiat molestiae qui minima hic!</span></p>
+  <header>
+    <img src="images/home.png" alt="Site Logo" width="48" height="48" />
+    <span>Chamber of Commerce</span>
+    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+  </header>
+
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li class="current"><a href="#">Home</a></li>
+      <li><a href="#">Chamber Project</a></li>
+      <li><a href="#">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <div class="hero">
+      <div class="paragraph">
+        <span class="myIntro">About Me</span>
+        <p>
+          Hello! I am a web development student passionate about building responsive, user-friendly applications. This page displays my coursework.
+        </p>
+      </div>
+      <div class="pict_container">
+        <span class="myIntro">Student Photo</span>
+        <img src="images/profile.jpg" alt="Student Photo" />
+      </div>
+    </div>
+
+    <h3 class="web_certif">Web Certificate Courses</h3>
+    <div class="container">
+      <div class="filtered-buttons">
+        <button class="active" data-name="all">ALL</button>
+        <button data-name="CSE">CSE</button>
+        <button data-name="WDD">WDD</button>
+      </div>
+      <p class="total-credits">Total Credits: <span id="credits-count">0</span></p>
+      <div class="filtered-cards" id="card-container"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Saidi. All rights reserved. Last Modified: <span id="last-modified"></span></p>
+  </footer>
+  <script src="scripts/navigation.js" defer></script>
 </body>
 </html>

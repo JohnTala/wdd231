@@ -1,0 +1,40 @@
+
+
+/* MEDIA QUERY */
+@media only screen and (min-width: 38rem) {
+  header, nav, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    height: 350px;
+    gap: 10px;
+  }
+
+  .web_certif{
+    max-width: 855px; 
+    margin: 10px auto;
+    margin-left: 10px;
+  }
+  .pict_container img {
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+  }
+}
