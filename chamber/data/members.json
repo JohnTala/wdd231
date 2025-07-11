@@ -1,0 +1,71 @@
+
+
+{
+  "members": [
+  {
+    "photo":"capeTech.png",
+    "name": "CapeTech Solutions",
+    "tagline": "Innovating Cape Town",
+    "address":"6 Harrier Way, Grassy Park, Cape Town 7943",
+    "email": "info@capetech.co.za",
+    "phone": "021-555-1234",
+    "url": "https://www.capetech.co.za"
+  },
+  {
+    "photo":"picknpay.png",
+    "name": "Pick'n Pay Group",
+    "tagline": "Fresh & Local",
+    "address":"Pick n Pay Office Park, 101 Rosmead Avenue, Kenilworth, Cape Town, 7708",
+    "email": "customercare@pnp.co.za",
+    "phone": "+27 860 30 30 30",
+    "url": "https://www.picknpay.co.za"
+  },
+  {
+    "photo":"abrandg.png",
+    "name": "Abraham & Gross | Attorneys",
+    "tagline": "Trusted Legal Support",
+    "address":"2 Heerengracht Street Foreshore Cape Town 8001",
+    "email": "info@abgross.co.za",
+    "phone": "+27 (0)21 422 1323",
+    "url": "https://www.abgross.co.za/"
+  },
+  {
+    "photo":"mtn.png",
+    "name": "MTN Group",
+    "tagline": "We Live Y 'ello",
+    "address":"216, 14th Avenue Fairland Johannesburg ",
+    "email": "MTNGroup.PressOffice@mtn.com",
+    "phone": " 011 912 3000",
+    "url": "https://www.mtn.com"
+  },
+{
+  "photo":"shopritegroup.png",
+    "name": "Shoprite Group",
+    "tagline": "Act For Change",
+    "address":"Cnr William Dabbs Street and Old Paarl Road, Brackenfell,Cape Town 7560",
+    "email": "businesscard@shoprite.co.za",
+    "phone": " 080 001 0709",
+    "url": "https://www.shoprite.co.za"
+  },
+  {
+    "photo":"absa.png",
+    "name": "ABSA Group",
+    "tagline": "Your Story Matters",
+    "address":"7th Floor, Absa Towers West, 15 Troye Street, Johannesburg 2001",
+    "email": "absa@absa.co.za",
+    "phone": " +27 (0) 11 350 4000",
+    "url": "https://www.absa.africa"
+  },
+  {
+    "photo":"irvin&j.png",
+    "name": "Irvin & Johnson ",
+    "tagline": "Delicious fish dishes for family & friends",
+    "address":"1 Davidson Street Woodstock, Cape Town 7925 " ,
+    "email": "talk2us@ij.co.za",
+    "phone": "+27(0)21 4407800",
+    "url": "https://www.ij.co.za"
+  }
+]
+  
+}
+

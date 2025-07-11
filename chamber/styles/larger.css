@@ -1,0 +1,142 @@
+@media only screen and (min-width: 38rem) {
+  header, nav, main, footer {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+ .banner-container {
+  width: 1000px;
+  height: 25rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+    width: auto;
+  }
+
+  .navigation ul {
+    flex-direction: row;
+    gap: 1rem;
+    border-bottom: none;
+    justify-content: flex-end;
+  }
+
+  .navigation a {
+    border-bottom: none;
+    padding: 0.5rem 1rem;
+  }
+
+  .navigation li.current {
+    background-color: #eee;
+  }
+
+  .navigation a:hover {
+    background-color: #21222f;
+    color: #fff;
+  }
+
+  
+  .hero {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hero > * {
+    flex-basis: 200px;
+    flex-grow: 1;
+    height: 300px;
+    padding: 0;
+
+  }
+
+  .hero > :first-child {
+    flex-basis: 450px;
+  }
+
+  #forecast{
+    line-height: 35px;
+    font-weight: 300;
+    font-size: large;
+    list-style-type: none;
+
+  }
+
+  #forecast span{
+    display: block;
+    padding: 0;
+  }
+
+  #weather{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+  }
+
+  #weather:nth-child(3){
+    padding-bottom: 120px;
+    
+  }
+
+  #weather img{
+    display:block;
+     padding-bottom: 120px;
+
+  }
+ 
+  #weather :first-child {
+  display: flex;
+  flex-grow: 1;
+  height: 36px;
+}
+
+
+#directory.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 20px;
+
+}
+#directory.grid .card{
+  box-shadow:  rgba(5, 7, 7, 0.3) 0 4px 10px;
+}
+  .social a{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height:75px;
+  border:#ccc solid 1px;
+  border-radius: 50px;
+
+}
+
+  .social img{
+  width: 50px;
+  height: 50px;
+}
+
+
+footer{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-wrap: wrap;
+}
+  
+}
+  

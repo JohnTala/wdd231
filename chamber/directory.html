@@ -1,31 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Saidi Talatala" >
-    <meta name="description" content="WDD231 – Chamber commerce project  |Saidi Talatala |">
-    <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="SA Chamber of Commerce" />
-    <meta property="og:description" content="Connecting businesses across South Africa. Explore opportunities, resources, and networking with the official SA Chamber of Commerce. Empowering growth and partnerships." />
-    <meta property="og:url" content="https://johntala.github.io/wdd231/chamber/" />
-    <meta property="og:image" content="https://johntala.github.io/wdd231/chamber/images/logo4.jpg" />
-    <meta property="og:site_name" content="SA Chamber of Commerce" />
-    <title>SA Chamber of commerce</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
-    <!--Favicon-->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <!--Stylesheets --
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css"> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Saidi Talatala" />
+  <meta name="description" content="WDD231 – Chamber commerce project | Saidi Talatala |" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SA Chamber of Commerce" />
+  <meta property="og:description" content="Connecting businesses across South Africa. Explore opportunities, resources, and networking with the official SA Chamber of Commerce. Empowering growth and partnerships." />
+  <meta property="og:url" content="https://johntala.github.io/wdd231/chamber/" />
+  <meta property="og:image" content="https://johntala.github.io/wdd231/chamber/images/sa-chamberofcommerce.png" />
+  <meta property="og:site_name" content="SA Chamber of Commerce" />
+
+  <title>SA Chamber of Commerce</title>
+  <!---Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!--Favourite icons-->
+  <link rel="shortcut icon" href="images/sa-favicon.ico" type="image/x-icon" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <script src="scripts/chamber.js" defer></script>
 </head>
 <body>
-    
+  <header>
+    <div class="branding">
+      <img src="images/sa-chamberofcommerce.png" alt="Site Logo"  loading="lazy"  width="48" height="48" />
+      <span>SA Chamber of Commerce</span>
+    </div>
+    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <section class="banner-container">
+    <img class="banner-image" src="images/sa-commerce.jpg" alt="Chamber Banner" loading="lazy"/>
+    <div class="banner-keynote">
+      <h1>Empowering South African Businesses</h1>
+      <p>Connect. Grow. Succeed.</p>
+    </div>
+  </section>
+
+  <main id="home">
+    <h1>Home</h1>
+    <section class="hero">
+      <div class="events">
+        <span>Events</span>
+        <p>Networking Mixer – July 20th</p>
+        <p>Business Workshop – Aug 5th</p>
+      </div>
+
+      <div class="weather" id="weather">
+        <span>Current Weather</span>
+        <!-- JS inserts here -->
+         
+      </div>
+
+      <div class="forecast" id="forecast">
+        <span>Weather Forecast</span>
+        <!-- JS inserts here -->
+      </div>
+    </section>
+
+    <h2 class="business-directory">Business Directory</h2>
+    <div class="view-toggle">
+    <div id="grid-view" aria-label="Grid View"><img src="images/view-grid-symbolic-svgrepo-com.svg" alt="grid view"></div>
+    <div id="list-view" aria-label="List View"><img src="images/list-svgrepo-com.svg" alt="list view"></div>
+    </div>
+
+    <section id="directory" class="grid">
+      <!-- Business cards injected by JS -->
+    </section>
+
+    <footer>
+      <div>
+        <p><strong>SA Chamber Of Commerce</strong> </p>
+        <p>33 Fricker Road</p>
+        <p>
+          Illovo,Johannesburg 2196 
+        </p>
+        <p>info@sacci.org.za</p>
+        <p>(2711) 446-3800</p>
+      </div>
+      <div class="social">
+        <a href="http://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+        <a href="http://www.github.com" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+        <a href="http://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+      </div>
+      <div>
+      <p>WDD231 Class Project</p>
+      <p>Saidi Talatala</p>
+      <p>&copy;<span id="currentYear"></span> SA Chamber Of Commerce</p>
+      <p>Last Modified <span id="lastModified"></span></p>
+      </div>
+      
+    </footer>
 </body>
+
 </html>
+
+
+

@@ -1,0 +1,311 @@
+
+
+  /* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #3D405B;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 1rem 10px;
+  font-weight: 300;
+
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header img {
+  width: 48px;
+  height: 48px;
+}
+
+header span {
+  font-size: 1.2rem;
+  
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+/* Navigation */
+.navigation {
+  display: none;
+  width: 100%;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.8rem 10px;
+  text-decoration: none;
+  color: #3D405B;
+  border-bottom: 1px solid #ddd;
+}
+
+.navigation li.current {
+  background-color: #eee;
+}
+
+.navigation a:hover {
+  background-color: #21222f;
+  color: #fff;
+}
+
+/* Banner */
+.banner-container {
+  position: relative;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-keynote {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.banner-keynote h1 {
+  font-size: 1.5rem;
+  color:  #eee;
+}
+
+.banner-keynote p {
+  font-size: 1rem;
+  color: #eee;
+
+}
+
+/* Hero Sections */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1rem;
+}
+
+.hero > * {
+  background: #eee;
+  padding:0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 10px;
+}
+
+.hero div span {
+  display: block;
+  font-weight: bold;
+  background: #21222f;
+  color: white;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+ #forecast{
+    line-height: 35px;
+    font-weight: 300;
+    font-size: large;
+    list-style-type: none;
+
+  }
+
+  #forecast span{
+    display: block;
+    padding: 0;
+  }
+
+ #weather{
+  display:flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ 
+
+.business-directory,h1{
+  margin-left:10px;
+  margin-top:20px;
+}
+
+.view-toggle {
+  margin: 0 auto;
+ margin-bottom: 1rem; 
+  text-align: center;
+}
+
+/* List layout */
+#directory.list {
+  display: block;
+
+}
+
+#directory.list .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0.5rem;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: smaller;
+  font-weight: 300;
+}
+
+
+
+/* Zebra stripes */
+#directory.list .card:nth-child(even) {
+  background-color: #eee;
+}
+
+#directory.list .card:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Ensure grid layout still works */
+#directory.grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+      
+
+}
+
+#directory {
+  margin-bottom: 1rem;
+}
+
+#directory.grid .card {
+  background-color: #eee;
+  box-shadow: rgba(5, 7, 7, 0.3) 0 4px 10px;
+  padding: 1rem 0;
+  font-size: small;
+  font-weight: 350;
+  height: 240px;
+  text-align:center;
+  line-height: 25px;
+  flex-grow: 1;
+  flex-basis: 270px;
+  height: 270px;
+  flex-wrap: wrap;
+
+}
+
+#grid-view ,#list-view{
+  display:inline-block;
+  border: #aaa solid 2px;
+  padding:3px;
+  cursor: pointer;
+  border-radius: 3px;
+  /* box-shadow: rgba(5, 7, 7, 0.3) 0 4px 10px; */
+}
+
+#grid-view:hover ,#list-view:hover{
+  background-color: #eee;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #eee;
+}
+
+.card img {
+  max-width: 100px;
+  min-height: 40;
+  object-fit: cover;
+}
+
+
+
+.view-toggle img{
+  width:48px;
+  height: 48px;
+}
+
+
+.social{
+display:flex;
+  justify-content: center;
+ column-gap: 8px;
+}
+
+.social a{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height:36px;
+  border:#ccc solid 1px;
+  border-radius: 22px;
+  margin: 1rem 0;
+  
+}
+
+.social img{
+  width: 22px;
+  height: 22px;
+  
+}
+
+.social a:hover{
+  background-color: #ddd;
+}
+
+
+.hide-images img {
+  display: none;
+}
+footer{
+  background: #eee;
+  padding: 1rem 10px;
+  text-align: center;
+  font-weight: 300;
+}
+
+
