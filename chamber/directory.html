@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Saidi Talatala" >
-  <meta name="description" content="WDD231 – Chamber commerce project | Saidi Talatala |" >
+  <meta name="description" content="Connecting businesses across South Africa. Explore opportunities, resources, and networking with the official SA Chamber of Commerce" >
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" >
@@ -16,12 +16,12 @@
 
   <title>SA Chamber of Commerce</title>
   <!---Google fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com" >
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:wght@100;400;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!--Favourite icons-->
-  <link rel="shortcut icon" href="images/sa-favicon.ico" type="image/x-icon" >
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" >
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css" >
@@ -33,7 +33,7 @@
 <body>
   <header>
     <div class="branding">
-      <img src="images/sa-chamberofcommerce.png" alt="Site Logo"  loading="lazy"  width="48" height="48" >
+      <img src="images/sa-chamberofcommerce.webp" alt="Site Logo"  loading="lazy"  width="48" height="48" >
       <span>SA Chamber of Commerce</span>
     </div>
     <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
@@ -47,16 +47,39 @@
     </nav>
   </header>
 
- <section class="banner-container">
-    <img class="banner-image" src="images/sa-commerce.jpg" alt="Chamber Banner" loading="lazy">
+ <div class="banner-container">
+
+  <picture>
+  <!-- Mobile image (WebP format) -->
+  <source 
+    media="(max-width: 767px)" 
+    srcset="images/sa-commerce-mobile.webp" 
+    type="image/webp">
+  
+  <!-- Desktop image (WebP format) -->
+  <source 
+    media="(min-width: 768px)" 
+    srcset="images/sa-commerce-desktop.webp" 
+    type="image/webp">
+
+  <!-- Fallback JPEG image for older browsers -->
+  <img 
+    class="banner-image" 
+    src="images/sa-commerce.jpg" 
+    alt="South Africa Chamber of Commerce official banner showcasing economic growth and trade initiatives" 
+    loading="lazy" 
+    width="1920" 
+    height="600">
+</picture>
+
     <div class="banner-keynote">
-      <h1>Empowering South African Businesses</h1>
+      <p>Empowering South African Businesses</p>
       <p>Connect. Grow. Succeed.</p>
     </div>
-  </section>
+  </div>
 
   <main>
-    <h2>Home</h2>
+    <h1>Home</h1>
     <div class="hero">
       <div class="events">
         <span>Events</span>
@@ -78,8 +101,8 @@
 
     <h3 class="business-directory">Business Directory</h3>
     <div class="view-toggle">
-    <div id="grid-view"><img src="images/view-grid-symbolic-svgrepo-com.svg" alt="grid view"></div>
-    <div id="list-view"><img src="images/list-svgrepo-com.svg" alt="list view"></div>
+    <div id="grid-view"><img src="images/grid-button.svg" alt="grid view"></div>
+    <div id="list-view"><img src="images/list-button.svg" alt="list view"></div>
     </div>
 
     <div id="directory" class="grid">
@@ -98,7 +121,7 @@
       </div>
       <div class="social">
         <a href="http://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
-        <a href="http://www.github.com" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+        <a href="http://www.github.com" target="_blank"><img src="images/github-icon.svg" alt="github" width="16" height="16"></a>
         <a href="http://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
       </div>
       <div>
