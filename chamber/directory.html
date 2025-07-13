@@ -37,14 +37,6 @@
       <span>SA Chamber of Commerce</span>
     </div>
     <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
-    <!-- <nav id="nav-bar" class="navigation">
-      <ul>
-        <li class="current"><a href="#">Home</a></li>
-        <li><a href="#">Directory</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Discover</a></li>
-      </ul>
-    </nav> -->
 
     <nav id="nav-bar" class="navigation">
   <ul>
@@ -55,39 +47,41 @@
   </ul>
 </nav>
 
-  </header>
+</header>
 
- <div class="banner-container">
+  <div class="banner-container">
 
   <picture>
-  <!-- Mobile image (WebP format) -->
-  <source 
-    media="(max-width: 767px)" 
-    srcset="images/sa-commerce-mobile.webp" 
-    type="image/webp">
-  
-  <!-- Desktop image (WebP format) -->
-  <source 
-    media="(min-width: 768px)" 
-    srcset="images/sa-commerce-desktop.webp" 
-    type="image/webp">
+    <!-- Mobile WebP image -->
+    <source 
+      media="(max-width: 767px)" 
+      srcset="images/sa-commerce-mobile.webp" 
+      type="image/webp">
 
-  <!-- Fallback JPEG image for older browsers -->
-  <img 
-    class="banner-image" 
-    src="images/sa-commerce.webp" 
-    alt="South Africa Chamber of Commerce official banner showcasing economic growth and trade initiatives" 
-    loading="lazy" 
-    width="1920" 
-    height="600">
-</picture>
+    <!-- Desktop WebP image -->
+    <source 
+      media="(min-width: 768px)" 
+      srcset="images/sa-commerce-desktop.webp" 
+      type="image/webp">
 
+    <!-- Fallback JPEG image for browsers that don’t support WebP -->
+    <img 
+      class="banner-image" 
+      src="images/sa-commerce-desktop.jpg" 
+      alt="South Africa Chamber of Commerce official banner showcasing economic growth and trade initiatives"
+      width="1920" 
+      height="1080" 
+      decoding="async" 
+      fetchpriority="high"
+      style="max-width: 100%; height: auto;">
+  </picture>
+
+</div>
     <div class="banner-keynote">
       <p>Empowering South African Businesses</p>
       <p>Connect. Grow. Succeed.</p>
     </div>
-  </div>
-
+  
   <main>
     <h1>Home</h1>
     <div class="hero">

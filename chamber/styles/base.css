@@ -91,40 +91,30 @@ header span {
   color:#fff;
 } 
 
-
-/* Banner */
 .banner-container {
   position: relative;
-  height: 25rem;
-  overflow: hidden;
 }
 
 .banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .banner-keynote {
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 18%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
   border-radius: 8px;
 }
-
-.banner-keynote h1 {
-  font-size: 1.5rem;
-  color:  #eee;
-}
-
 .banner-keynote p {
-  font-size: 1rem;
-  color: #eee;
-
+  font-size: 1.5rem;
+  color:  #fff;
 }
+
 
 /* Hero Sections */
 .hero {
@@ -215,7 +205,6 @@ header span {
   flex-wrap: wrap;
   gap:10px;
       
-
 }
 
 #directory {
@@ -294,8 +283,7 @@ display:flex;
 
 .social img{
   width: 22px;
-  height: 22px;
-  
+  height: 22px; 
 }
 
 .social a:hover{
