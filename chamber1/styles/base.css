@@ -74,7 +74,7 @@ header span {
   width: 100%;
 }
 
-.navigation a {
+ .navigation a {
   display: block;
   padding: 0.8rem 10px;
   text-decoration: none;
@@ -83,13 +83,14 @@ header span {
 }
 
 .navigation li.current {
-  background-color: #eee;
+  background-color: #ddd;
 }
 
 .navigation a:hover {
   background-color: #21222f;
-  color: #fff;
-}
+  color:#fff;
+} 
+
 
 /* Banner */
 .banner-container {

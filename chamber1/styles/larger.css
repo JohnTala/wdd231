@@ -38,16 +38,6 @@
     padding: 0.5rem 1rem;
   }
 
-  .navigation li.current {
-    background-color: #eee;
-  }
-
-  .navigation a:hover {
-    background-color: #21222f;
-    color: #fff;
-  }
-
-  
   .hero {
     flex-direction: row;
     flex-wrap: wrap;
@@ -107,7 +97,7 @@
 #directory.grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-bottom: 20px;
 
 }
