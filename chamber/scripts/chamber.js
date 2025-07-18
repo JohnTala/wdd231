@@ -1,7 +1,16 @@
 
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('figcaption');
+const forecastBox = document.getElementById('forecast');
+
 const API_KEY = '4feb6b4e5e7d76f444327222cfcdb424';
 const CITY = 'Cape Town';
 const UNITS = 'metric';
+
+
+getApiWeather();
+getSpotlights();
 
 // Hamburger menu
 document.getElementById('ham-btn').addEventListener('click', () => {
@@ -9,134 +18,67 @@ document.getElementById('ham-btn').addEventListener('click', () => {
   document.getElementById('ham-btn').classList.toggle('show');
 });
 
-// Fetch current weather
-async function getWeather() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=${UNITS}`;
 
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
 
-    const weatherBox = document.getElementById("weather");
-    weatherBox.innerHTML += `
-      <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}" />
-      <div class="details">
-        <p><strong>${Math.round(data.main.temp)}°C</strong></p>
-        <p>${data.weather[0].main}</p>
-        <p>High: ${Math.round(data.main.temp_max)}°</p>
-        <p>Low: ${Math.round(data.main.temp_min)}°</p>
-        <p>Humidity: ${data.main.humidity}%</p>
-      </div>
-    `;
-  } catch (error) {
-    console.error("Error loading current weather:", error);
-  }
-}
-
-// Fetch 3-day forecast
-async function getForecast() {
+async function getApiWeather() {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${API_KEY}&units=${UNITS}`;
-  
   try {
     const res = await fetch(url);
-    const data = await res.json();
-
-    const forecastBox = document.getElementById("forecast");
-    let count = 0;
-
-    for (let i = 0; i < data.list.length && count < 3; i++) {
-      if (data.list[i].dt_txt.includes("12:00:00")) {
-        const forecastDate = new Date(data.list[i].dt_txt);
-        const temp = `${Math.round(data.list[i].main.temp)}°C`;
-        const dayName = count === 0 ? "Today" : forecastDate.toLocaleDateString(undefined, { weekday: "long" });
-
-        const li = document.createElement("li");
-        li.innerHTML = `<p><strong>${dayName}:</strong> ${temp}</p>`;
-        forecastBox.appendChild(li);
-
-        count++;
-      }
+    if (res.ok) {
+      const data = await res.json();
+      displayResults(data);
+    } else {
+      throw Error(await res.text());
     }
   } catch (error) {
-    console.error("Error loading forecast:", error);
+    console.log("Weather Error:", error);
   }
 }
 
-// Toggle Directory View
-const directory = document.getElementById('directory');
-const gridBtn = document.getElementById('grid-view');
-const listBtn = document.getElementById('list-view');
+function displayResults(data) {
+  const today = data.list[0];
+  currentTemp.innerHTML = `${today.main.temp.toFixed(1)}&deg;C`;
+  const iconSrc = `https://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png`;
+  captionDesc.textContent = today.weather[0].description;
+  weatherIcon.setAttribute('src', iconSrc);
+  weatherIcon.setAttribute('alt', today.weather[0].description);
 
-gridBtn.addEventListener('click', () => {
-  directory.classList.add('grid');
-  directory.classList.remove('list', 'hide-images');
-  gridBtn.classList.add('active');
-  listBtn.classList.remove('active');
-  directory.style.marginBottom = '1rem';
-});
-
-listBtn.addEventListener('click', () => {
-  directory.classList.add('list', 'hide-images');
-  directory.classList.remove('grid');
-  listBtn.classList.add('active');
-  gridBtn.classList.remove('active');
-  directory.style.marginBottom = '1rem';
-});
-
-// Load Directory Members
-async function getMembers() {
-  try {
-    const response = await fetch('data/members.json');
-    if (!response.ok) throw new Error('Failed to fetch data');
-    const data = await response.json();
-    displayMembers(data.members);
-  } catch (error) {
-    console.error('Error loading members:', error);
-  }
-}
-
-function displayMembers(members) {
-  directory.innerHTML = '';
-
-  members.forEach(member => {
-    const card = document.createElement('div');
-    card.classList.add('card');
-
-    const membershipLevels = ['Member', 'Silver', 'Gold'];
-    const levelText = membershipLevels[member.membershipLevel - 1] || 'Member';
-
-    card.innerHTML = `
-      <img src="images/${member.photo}" alt="${member.name} logo" loading="lazy">
-      <div><strong>${member.name}</strong></div>
-      <div>${member.address}</div>
-      <div>${member.phone}</div>
-      <a href="${member.url}" target="_blank" rel="noopener">Visit Website</a>
-      <div><strong>Membership Level:</strong> ${levelText}</div>
-    `;
-
-    directory.appendChild(card);
+  // Forecast for 3 upcoming days (filter 12:00:00 entries)
+  const daily = data.list.filter(item => item.dt_txt.includes("12:00:00"));
+  forecastBox.innerHTML = "";
+  daily.slice(1, 4).forEach(day => {
+    const date = new Date(day.dt_txt).toLocaleDateString("en-US", { weekday: 'short' });
+    forecastBox.innerHTML += `
+      <div class="forecast-item">
+        <strong>${date}</strong>: ${day.main.temp.toFixed(1)}&deg;C
+      </div>`;
   });
 }
 
-// Footer Date Logic
-window.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-  const modified = new Date(document.lastModified);
-  const options = {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-  };
-  document.getElementById("lastModified").textContent = modified.toLocaleString(undefined, options);
-});
+async function getSpotlights() {
+    
+  const response = await fetch("data/members.json");
+  const data = await response.json();
 
-// Init App
-getWeather();
-getForecast();
-getMembers();
+  const silverGold = data.members.filter(m => m.membership === "Gold" || m.membership === "Silver");
+
+  const shuffled = silverGold.sort(() => 0.5 - Math.random()).slice(0, 3);
+  const spotlightContainer = document.querySelector(".spotlight-container");
+
+  shuffled.forEach(member => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML = `
+      <h3>${member.name}</h3>
+      <img src="images/${member.photo}" alt="${member.name} logo" loading="lazy">
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
+      <a href="${member.url}" target="_blank">Visit Website</a>
+      <p class="level">${member.membership} Member</p>
+    `;
+    spotlightContainer.appendChild(card);
+  });
+}
 
 

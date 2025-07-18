@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Weather</title>
+    <script src="scripts/weather.js" defer></script>
+</head>
+<body>
+    <h1>OpenWeatherMap.org API Test</h1>
+<main>
+  <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
+  <figure>
+    <img id="weather-icon" src="" alt="">
+    <figcaption></figcaption>
+  </figure>
+</main>
+<footer>
+  Saidi Talatala | OpenWeatherMap.org | CC BY-SA 4.0
+</footer>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+      background: #f0f8ff;
+    }
+    #weather-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: inline-block;
+      padding: 2rem;
+    }
+    img {
+      width: 100px;
+      height: auto;
+    }
+    #current-temp {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    figcaption {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather in Trier</h1>
+  <div id="weather-container">
+    <figure>
+      <img id="weather-icon" src="" alt="weather icon" />
+      <figcaption></figcaption>
+    </figure>
+    <p id="current-temp">Loading...</p>
+  </div>
+
+  <script src="scripts/weather.js" defer></script>
+</body>
+</html>
