@@ -9,7 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.5;
   background: #f4f6f8;
   -webkit-font-smoothing: antialiased;
@@ -443,12 +443,14 @@ footer {
   background: #eee;
   padding: 1rem 5px;
   text-align: center;
-  font-weight: 200;
+  font-weight: 100;
   font-size: small;
   color: #3D405B;
   box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
   animation: fadeIn 1s ease forwards;
 }
+
+
 
 /* Animations */
 @keyframes fadeIn {
