@@ -1,5 +1,5 @@
 
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 738px) {
   header, nav, main, footer {
     max-width: 1000px;
     margin: 0 auto;
@@ -124,6 +124,88 @@
     filter: brightness(0) invert(1);
   }
 
+  .form-membership-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .form-section h2 {
+    margin-left: 7.3rem;
+  }
+
+  .form-section {
+    flex: 2;
+  }
+
+  .membership-section {
+    flex: 1;
+  }
+
+  .membership-cards {
+    align-items: stretch;
+  }
+
+  .card {
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
+    animation: fadeIn 1s ease forwards;
+
+  }
+
+  .card {
+  margin-top: 20px;
+  background-color: #d4d2eb;
+  color:#30264b;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  animation: fadeInCard 0.6s ease-out forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+  .membership-cards-inline {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .membership-cards-inline .card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 48%;
+  }
+
+  dialog#fallback-dialog {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #f4f1de;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color: #3D405B;
+    font-size: 1rem;
+    margin: 15% auto;
+    
+  }
+
+  dialog#fallback-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  dialog#fallback-dialog button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3D405B;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+
   footer {
     display: flex;
     justify-content: space-evenly;
@@ -165,4 +247,15 @@
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }

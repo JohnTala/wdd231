@@ -187,6 +187,7 @@ button.active {
   border-radius: 10px;
   padding: 10px;
   background: #fff;
+  cursor: pointer;
 }
 
 .hide {
@@ -199,4 +200,129 @@ footer {
   padding: 20px;
   background: #eee;
   color: #3D405B;
+}
+
+/*---Modal------*/
+
+#course-profile {
+
+ border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: .25rem;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 3rem #777;
+  width: 90%;
+  max-width: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0; /* prevent browser default centering conflicts */
+  z-index: 1000;
+}
+
+#course-profile::backdrop {
+  background: rgb(0 0 0 / 50%);
+}
+
+#course-profile .close-button {
+  
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  padding: .5rem 1rem;
+  border: 1px solid rgb(0 0 0 / 10%);
+}
+
+/* Styles for any <dialog> when open */
+dialog[open] {
+  background-color: beige;
+  border-radius: 10px;
+  border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+
+form-membership-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input, form select, form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+form input:required:invalid {
+  border-color: red;
+}
+
+form button {
+  background-color: #3D405B;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2D3142;
+}
+
+.membership-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.membership-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #ccc;
+  border-left: 6px solid #3D405B;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.cardx {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.cardx:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+dialog {
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+#results p {
+  margin-bottom: 0.5rem;
 }

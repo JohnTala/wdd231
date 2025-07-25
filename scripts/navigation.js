@@ -1,4 +1,3 @@
-
 const navbutton = document.querySelector('#ham-btn');
 const navBar = document.querySelector('#nav-bar');
 
@@ -16,7 +15,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'This course introduces programming fundamentals using Python.',
     technology: ['Python'],
-    completed: true
+    completed: true,
   },
   {
     subject: 'WDD',
@@ -26,7 +25,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Learn basic web design and development with HTML and CSS.',
     technology: ['HTML', 'CSS'],
-    completed: true
+    completed: true,
   },
   {
     subject: 'CSE',
@@ -36,7 +35,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Write and organize code using functions in Python.',
     technology: ['Python'],
-    completed: false
+    completed: false,
   },
   {
     subject: 'CSE',
@@ -46,7 +45,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Object-oriented programming using C# with classes and inheritance.',
     technology: ['C#'],
-    completed: false
+    completed: false,
   },
   {
     subject: 'WDD',
@@ -56,7 +55,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Create interactive websites with JavaScript.',
     technology: ['HTML', 'CSS', 'JavaScript'],
-    completed: false
+    completed: false,
   },
   {
     subject: 'WDD',
@@ -66,25 +65,17 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Focus on UX, accessibility, performance, and APIs.',
     technology: ['HTML', 'CSS', 'JavaScript'],
-    completed: false
-  }
+    completed: false,
+  },
 ];
 
 function renderCards(subject = 'all') {
   const container = document.getElementById('card-container');
   container.innerHTML = '';
 
-  let filtered;
-  if (subject === 'all') {
-  filtered = courses;
-    } else {
-  filtered = courses.filter(c => c.subject === subject);
-    }
-    
-  let totalCredits = 0;
-  for (let course of filtered) {
-  totalCredits += course.credits;
- }
+  let filtered = subject === 'all' ? courses : courses.filter(c => c.subject === subject);
+
+  let totalCredits = filtered.reduce((sum, course) => sum + course.credits, 0);
   document.getElementById('credits-count').textContent = totalCredits;
 
   filtered.forEach(course => {
@@ -98,6 +89,28 @@ function renderCards(subject = 'all') {
       <p><strong>Course:</strong> ${course.subject} ${course.number}</p>  
       ${course.completed ? '<span class="badge">✅ Completed</span>' : ''}
     `;
+
+    card.addEventListener('click', () => {
+      const dialogBox = document.getElementById('course-profile');
+      dialogBox.innerHTML = `
+        <p><strong>${course.subject} ${course.number}</strong> <button class="close-button">❌</button></p>
+     <h3>${course.title}</h3>
+     <p><strong>Credits</strong>: ${course.credits}</p>
+     <p><strong>Certificate</strong>: ${course.certificate}</p>
+     <p>${course.description}</p>
+     <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+      `;
+      dialogBox.showModal();
+
+      // Add close button event
+      dialogBox.querySelector('.close-button').addEventListener('click', () => {
+        dialogBox.close();
+        
+      });
+
+      
+    });
+
     container.appendChild(card);
   });
 }
@@ -105,7 +118,7 @@ function renderCards(subject = 'all') {
 function setupFiltering() {
   document.querySelectorAll('.filtered-buttons button').forEach(button => {
     button.addEventListener('click', (e) => {
-      document.querySelector('.active').classList.remove('active');
+      document.querySelector('.active')?.classList.remove('active');
       e.target.classList.add('active');
       renderCards(e.target.dataset.name);
     });

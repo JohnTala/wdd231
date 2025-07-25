@@ -14,7 +14,7 @@
   <meta property="og:image" content="images/sa-chamberofcommerce.webp" >
   <meta property="og:site_name" content="SA Chamber of Commerce" >
 
-  <title>SA Chamber of Commerce | Join</title>
+  <title>SA Chamber of Commerce | Thank you</title>
   <!---Google fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,77 +83,21 @@
       <p><a href="join.html" class="cta">Join the Chamber</a></p>
   </div>
 
-  <!-- Main Content -->
-  <main >
-    <h1>Join the Chamber of Commerce</h1>
-   <div class="form-membership-container">
+
+  <h1>Thank You for Joining!</h1>
+  <main class="form-membership-container">
     <section class="form-section">
-
-       <h2>Membership Application Form</h2>
-      <form action="thankyou.html" method="get">
-        <label for="first-name">First Name:
-          <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="First Name">
-        </label>
-        <label for="last-name">Last Name:
-          <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Last Name">
-        </label>
-        <label for="organizational-title">Title:
-          <input type="text" id="organizational-title" name="organizational-title" pattern="[a-zA-Z\s-]{7,}" autocomplete="organization-title" title="Organizational Title">
-        </label>
-        <label for="email">Email:
-          <input type="email" id="email" name="email" required autocomplete="email" title="Email" placeholder="example@example.com">
-        </label>
-        <label for="mobile-number">Cell Phone:
-          <input type="tel" id="mobile-number" name="mobile-number" required autocomplete="tel" title="Mobile Number">
-        </label>
-        <label for="business-name">Organization:
-          <input type="text" id="business-name" name="business-name" required autocomplete="organization" title="Business Name">
-        </label>
-        <label for="membership-level">Membership Level:
-          <select id="membership-level" name="membership-level">
-            <option value="NP Membership">NP Membership</option>
-            <option value="Bronze Membership">Bronze Membership</option>
-            <option value="Silver Membership">Silver Membership</option>
-            <option value="Gold Membership">Gold Membership</option>
-          </select>
-        </label>
-        <label for="business-description">Business Description:
-          <textarea id="business-description" name="business-description" title="Business Description"></textarea>
-        </label>
-        <input type="hidden" id="timestamp" name="timestamp" value="">
-        <input type="submit" value="Submit Application">
-      </form>
-    </section>
-
-    <section class="membership-section">
-      <h2>Membership Levels</h2>
-     
-      <div class="membership-cards">
-        <div class="card">
-          <h2>Non Profit Membership Level</h2>
-          <button class="learn-more" onclick="openModal('np')">Learn More</button>
-        </div>
-        <div class="card">
-          <h2>Bronze Membership Level</h2>
-          <button class="learn-more" onclick="openModal('bronze')">Learn More</button>
-        </div>
-        <div class="card">
-          <h2>Silver Membership Level</h2>
-          <button class="learn-more" onclick="openModal('silver')">Learn More</button>
-        </div>
-         <div class="card">
-          <h2>Gold Membership Level</h2>
-          <button class="learn-more" onclick="openModal('gold')">Learn More</button>
-        </div>
+      <p>Thank you, <strong id="first-name"></strong> <strong id="last-name"></strong>, for joining the SA Chamber of Commerce.</p>
+      <p>Here is the information you submitted:</p>
+      <div id="results">
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="mobile-number"></span></p>
+        <p><strong>Business Name:</strong> <span id="business-name"></span></p>
+        <p><strong>Submitted On:</strong> <span id="timestamp"></span></p>
       </div>
-       <dialog id="fallback-dialog">
-        <p id="fallback-message">This is a fallback message.</p>
-     </dialog>
     </section>
-    </div> 
   </main>
-
-   <footer>
+ <footer>
     <div>
       <p><strong>SA Chamber Of Commerce</strong></p>
       <p>33 Fricker Road</p>
@@ -196,3 +140,5 @@
   </footer>
 </body>
 </html>
+
+
