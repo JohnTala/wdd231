@@ -1,0 +1,24 @@
+@media only screen and (min-width: 38rem){
+
+
+    .destination article{
+                grid-template-areas:
+                "name ."
+                "picture description"
+                "picture location"
+                "info info"
+                ;
+                
+               }
+       .destination article img{
+        width: 300px;
+       }  
+       
+       .visit-message {
+    margin: 2rem auto;
+    max-width: 60ch;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+}

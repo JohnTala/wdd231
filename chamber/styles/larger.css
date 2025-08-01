@@ -1,7 +1,7 @@
 
-@media only screen and (min-width: 738px) {
+@media only screen and (min-width: 64rem) {
   header, nav, main, footer {
-    max-width: 1000px;
+    max-width: 64rem;
     margin: 0 auto;
   }
 
@@ -94,6 +94,27 @@
     transform: translateY(-8px);
   }
 
+
+   .destination{
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+   }
+
+
+   .visit-message {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color:#7174cd;
+  color:white;
+  border-left: 6px solid #4b58a2;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ 
+}
+
+   
   .social a {
     display: flex;
     justify-content: center;
