@@ -622,7 +622,7 @@ input:-webkit-autofill {
   border-left: 4px solid #4b58a2;
   border-radius: 6px;
   font-size: 1rem;
-  font-weight: 00;
+  font-weight: 300;
   animation: fadeInVisit 1s ease-in-out;
 
 }
