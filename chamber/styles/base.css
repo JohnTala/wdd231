@@ -621,8 +621,8 @@ input:-webkit-autofill {
   color:white;
   border-left: 4px solid #4b58a2;
   border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.15rem;
+  font-weight: 200;
   animation: fadeInVisit 1s ease-in-out;
 
 }
