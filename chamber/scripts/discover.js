@@ -1,39 +1,4 @@
-// import { places } from './places.mjs';
 
-// const myplaces = document.querySelector('.destination');
-// myplaces.innerHTML = places.map((place) => {
-//     return `<div>
-//              <img src='images/${place.image_url}' alt=${place.name}>
-//              <h2>${place.name}</h2>
-//              <address>${place.address}</address>
-//              <p>${place.description}</p>
-//              <a href="${place.url}" target="_blank" rel="noopener">Learn More</a>
-//          </div>`
-// }).join(" ");
-
-// const visitMessage = document.querySelector('.visit-message');
-
-// const lastVisit = localStorage.getItem('lastVisit');
-// const currentVisit = Date.now();
-// const oneDay = 1000 * 60 * 60 * 24;
-
-// let message = '';
-
-// if (!lastVisit) {
-//   message = 'Welcome! Let us know if you have any questions.';
-// } else {
-//   const daysPassed = Math.floor((currentVisit - Number(lastVisit)) / oneDay);
-//   if (daysPassed < 1) {
-//     message = 'Back so soon! Awesome!';
-//   } else if (daysPassed === 1) {
-//     message = 'You last visited 1 day ago.';
-//   } else {
-//     message = `You last visited ${daysPassed} days ago.`;
-//   }
-// }
-
-// visitMessage.textContent = message;
-// localStorage.setItem('lastVisit', currentVisit);
 import { places } from './places.mjs';
 
 const myplaces = document.querySelector('.destination');
