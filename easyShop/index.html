@@ -4,41 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Saidi Talatala">
-  <meta name="description" content="Have questions or need help? Contact EasyShop for support, inquiries, and customer service assistance. We're here to help you.">
+  <meta name="description" content="Shop online for high-quality products at unbeatable prices. Enjoy a seamless shopping experience, excellent customer service, and amazing deals every day.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" >
   <meta property="og:title" content="EasyShop - Online Shopping" >
-  <meta property="og:description" content="Have questions or need help? Contact EasyShop for support, inquiries, and customer service assistance. We're here to help you." >
+  <meta property="og:description" content="Shop online for high-quality products at unbeatable prices. Enjoy a seamless shopping experience, excellent customer service, and amazing deals every day." >
   <meta property="og:url" content="https://johntala.github.io/wdd231/easyShop" >
   <meta property="og:image" content="https://johntala.github.io/wdd231/easyShop/images/og-image.webp"> 
   <meta property="og:site_name" content="EasyShop - Online Shopping" >
 
+
   <meta name="twitter:url" content="https://johntala.github.io/wdd231/easyShop">
   <meta name="twitter:title" content="EasyShop - Online Shopping">
-  <meta name="twitter:description" content="Have questions or need help? Contact EasyShop for support, inquiries, and customer service assistance. We're here to help you.">
+  <meta name="twitter:description" content="Shop online for high-quality products at unbeatable prices. Enjoy a seamless shopping experience, excellent customer service, and amazing deals every day.">
   <meta name="twitter:card" content="summary">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:wght@100;400;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
-  <title>Contact Us | EasyShop - Online Shopping South Africa</title>
+  <title>Home page | EasyShop - Online Shopping South Africa</title>
 
    <!--Favourite icons-->
   <link rel="icon" href="images/favicon-x.ico" type="image/x-icon" >
+
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css" >
   <link rel="stylesheet" href="styles/small.css" >
   <link rel="stylesheet" href="styles/larger.css" >
 
-  <script src="scripts/contact.js" defer></script>
+  <script src="scripts/index.js" defer></script>
 </head>
 
 <body>
 
-    <header> 
+   <header> 
      <div class="branding">
       <img src="images/logoShop.webp" alt="Site Logo"  loading="lazy"  width="48" height="48" >
       <span>EasyShop</span>
@@ -47,16 +49,14 @@
 
     <nav id="nav-bar" class="navigation">
   <ul>
-    <li><a href="index.html">Home</a></li>
+     <li class="current"><a href="index.html">Home</a></li>
    <li><a href="products.html?category=all">Products</a></li>
-   <li class="current"><a href="contact.html">Contact Us</a></li>
+   <li ><a href="contact.html">Contact Us</a></li>
   </ul>
 </nav>
 
 </header>
-
-
-    <section class="banner-container">
+    <div class="banner-container">
         <picture>
           <!-- Mobile WebP image -->
           <source 
@@ -82,39 +82,56 @@
             >
         </picture>
 
-    </section>
+      </div>
 
-    <section class="banner-keynote">
+    <div class="banner-keynote">
       <p>Shop the Best, Pay Less – Browse Now!</p>
       <a href="products.html?category=all" class="cta">Shop here</a>
-    </section>
-
+    </div>
     <main>
-      <section class="page-title">
-      <h1>Contact Us</h1>
-      <p>We’d love to hear from you! Fill out the form below or reach us using the contact details provided.</p>
-    </section>
+       <!-- Categories -->
+  <div class="categories">
+    <a href="products.html?category=all" class="category">
+    <h3>🛒 All</h3>
+  </a>
+    <a href="products.html?category=Fashion" class="category">
+      <h3>👚 Fashion</h3>
+    </a>
+    <a href="products.html?category=Electronics" class="category">
+      <h3>📱 Electronics</h3>
+    </a>
+    <a href="products.html?category=Home%20Essentials" class="category">
+      <h3>🏠 Home Essentials</h3>
+    </a>
+    <a href="products.html?category=Beauty"  class="category">
+      <h3>💄 Beauty</h3>
+    </a>
+  </div>
 
-    <section class="contact-container">
-      <!-- Contact Form -->
-      <form action="#" method="post" class="contact-form">
-        <label for="name">Full Name<span aria-hidden="true">*</span></label>
-        <input type="text" id="name" name="name" required>
+  <!-- Trending Products -->
+  <h2 class="section-title">Trending Now</h2>
+  <div class="products">
+  <div class="product" data-title="Smart Watch" data-price="150" data-discount="30%" data-image="images/smart-watch2.webp">
+    <span class="badge">🔥 30% OFF</span>
+    <p>Smart Watch</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product" data-title="Noise Cancelling Headphones" data-price="220" data-discount="20%" data-image="images/headphones.webp">
+    <span class="badge">⚡ Hot Deal</span>
+    <p>Noise Cancelling Headphones</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product" data-title="Leather Handbag" data-price="180" data-discount="10%" data-image="images/bags.webp">
+    <span class="badge">New Arrival</span>
+    <p>Leather Handbag</p>
+    <button>Buy Now</button>
+  </div>
+</div>
 
-        <label for="email">Email Address<span aria-hidden="true">*</span></label>
-        <input type="email" id="email" name="email" required>
 
-        <label for="subject">Subject<span aria-hidden="true">*</span></label>
-        <input type="text" id="subject" name="subject" required>
-
-        <label for="message">Message<span aria-hidden="true">*</span></label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-
-        <button type="submit" class="cta">Send Message</button>
-      </form>
     </main>
     <footer>
-      <address>
+       <address>
         <strong>EasyShop - Online Shopping</strong><br>
         33 Fricker Road<br>
         Illovo, Johannesburg 2196<br>
@@ -123,10 +140,10 @@
     </address>
 
     <div class="social">
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" >
         <img 
           src="images/facebook.svg" 
-          alt="Visit us on Facebook"
+          alt="facebook" 
           width="22" 
           height="22" 
           loading="lazy">
@@ -134,7 +151,7 @@
       <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
         <img 
           src="images/instagram.svg" 
-          alt="github" 
+          alt="instagram" 
           width="22" 
           height="22" 
           loading="lazy">
@@ -142,11 +159,10 @@
       <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
         <img 
           src="images/twitter-x.svg" 
-          alt="linkedin" 
+          alt="twitter-x" 
           width="22" 
           height="22" 
           loading="lazy">
-
       </a>
     </div>
     <div>
@@ -155,10 +171,37 @@
       <p>&copy;<span id="currentYear"></span> EasyShop - Online Shopping</p>
       <p>Last Modified <span id="lastModified"></span></p>
       <p><strong>My API video :<a href="https://app.screencastify.com/watch/FNtRnSFE6WSmfi2cCzrD">EasyShop</a></strong></p>
-    </div>
 
+    </div>
     </footer>
-     
+
+    <dialog id="product-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <!-- Accessible close button -->
+    <button id="close-dialog" aria-label="Close dialog" type="button">&times;</button>
+    
+    <!-- Use lazy loading and a real placeholder to improve performance -->
+    <img 
+        id="dialog-image" 
+        src="images/placeholder.webp" 
+        alt="Product image preview" 
+        loading="lazy"
+        decoding="async"
+        width="400" 
+        height="400" 
+        style="max-width:100%; height:auto; border-radius:8px; margin-bottom:1rem;"
+    >
+    
+    <!-- Meaningful default heading -->
+    <h3 id="dialog-title">Product Name</h3>
+    
+    <!-- Group description for screen readers -->
+    <div id="dialog-description">
+        <p id="dialog-price"><strong>Price:</strong> R0</p>
+        <p id="dialog-discount"><strong>Discount:</strong> R0</p>
+    </div>
+</dialog>
+
+
 
 </body>
 </html>

@@ -1,0 +1,98 @@
+{
+  "shopName": "EasyShop",
+  "categories": {
+    "Fashion": [
+      {
+        "title": "Men's Slim Fit T-Shirt",
+        "image": "t-shirt.webp",
+        "price": 19.99
+      },
+      {
+        "title": "Women's Summer Dress",
+        "image": "dress.webp",
+        "price": 34.50
+      },
+      {
+        "title": "Women's glasses",
+        "image": "ladies-glasses.webp",
+        "price": 79.50
+      },
+      {
+        "title": "Sneakers",
+        "image": "louis-sneakers.webp",
+        "price": 279.50
+      },
+      {
+        "title": "Ladies sandals",
+        "image": "ladies-sandals.webp",
+        "price": 59.50
+      }
+    ],
+    "Electronics": [
+      {
+        "title": "Wireless headsets",
+        "image": "headsets.webp",
+        "price": 49.99
+      },
+      {
+        "title": "Smartphone 128GB",
+        "image": "iphone12.webp",
+        "price": 399.00
+      },
+      {
+        "title": "Tablets",
+        "image": "tablets.webp",
+        "price": 279.00
+      },
+      {
+        "title": "Smartwatch",
+        "image": "smart-watch.webp",
+        "price": 49.00
+      }
+    ],
+    "Home Essentials": [
+      {
+        "title": "Blender",
+        "image": "blender.webp",
+        "price": 39.95
+      },
+      {
+        "title": "Coffee table",
+        "image": "coffee-table.webp",
+        "price": 124.99
+      },
+      {
+        "title": "Microwave",
+        "image": "microwave.webp",
+        "price": 59.99
+      },
+      {
+        "title": "Sofa",
+        "image": "sofa.webp",
+        "price": 159.99
+      }
+    ],
+    "Beauty": [
+      {
+        "title": "Clinique Liquid Lipstick",
+        "image": "cliniquelipstick.webp",
+        "price": 12.75
+      },
+      {
+        "title": "Facial Cleanser 150ml",
+        "image": "facial-cleanser.webp",
+        "price": 15.00
+      },
+      {
+        "title": "Beauty Selection",
+        "image": "beauty-selection.webp",
+        "price": 115.00
+      },
+      {
+        "title": "Beauty eyelashes",
+        "image": "beauty-eyelashes.webp",
+        "price": 85.00
+      }
+    ]
+  }
+}

@@ -5,13 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Saidi Talatala">
   <meta name="description" content="Browse a wide range of quality products at great prices. Shop electronics, clothing, home goods, and more with EasyShop.">
+
+
+  <meta property="og:type" content="website" >
+  <meta property="og:title" content="EasyShop - Online Shopping" >
+  <meta property="og:description" content="Browse a wide range of quality products at great prices. Shop electronics, clothing, home goods, and more with EasyShop." >
+  <meta property="og:url" content="https://johntala.github.io/wdd231/easyShop" >
+  <meta property="og:image" content="https://johntala.github.io/wdd231/easyShop/images/og-image.webp"> 
+  <meta property="og:site_name" content="EasyShop - Online Shopping" >
+
+
+  <meta name="twitter:url" content="https://johntala.github.io/wdd231/easyShop">
+  <meta name="twitter:title" content="EasyShop - Online Shopping">
+  <meta name="twitter:description" content="Browse a wide range of quality products at great prices. Shop electronics, clothing, home goods, and more with EasyShop.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:wght@100;400;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+   <!--Favourite icons-->
+  <link rel="icon" href="images/favicon-x.ico" type="image/x-icon" >
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css" >
+  <link rel="stylesheet" href="styles/small.css" >
+  <link rel="stylesheet" href="styles/larger.css" >
+
   <title>EasyShop - Products | Browse Our Online Store</title>
+  <script src="scripts/products.js" type="module"></script>
 </head>
 
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    
+
+<header> 
+     <div class="branding">
+      <img src="images/logoShop.webp" alt="Site Logo"  loading="lazy"  width="48" height="48" >
+      <span>EasyShop</span>
+    </div>
+    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+
+    <nav id="nav-bar" class="navigation">
+  <ul>
+     <li ><a href="index.html">Home</a></li>
+   <li class="current"><a href="products.html?category=all">Products</a></li>
+   <li ><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+</header>
+  <section class="banner-container">
+        <picture>
+          <!-- Mobile WebP image -->
+          <source 
+            media="(max-width: 767px)" 
+            srcset="images/banner-mobile.webp" 
+            type="image/webp">
+
+          <!-- Desktop WebP image -->
+          <source 
+            media="(min-width: 768px)" 
+            srcset="images/banner-desktop.webp" 
+            type="image/webp">
+
+          <!-- Fallback JPEG image for browsers that don’t support WebP -->
+          <img 
+            class="banner-image" 
+            src="images/banner.webp" 
+            alt="EasyShop official banner showcasing unforgetable shopping experience and unbeatable deals"
+            width="1920" 
+            height="1080" 
+            decoding="async" 
+            fetchpriority="high"
+            >
+        </picture>
+
+    </section>
+
+    <section class="banner-keynote">
+      <p>Shop the Best, Pay Less – Browse Now!</p>
+      <a href="products.html?category=all" class="cta">Shop here</a>
+    </section>
+    <main>
+     <h1 id="category-title"></h1>
+      <section id="product-list" class="products-grid"></section>
+    </main>
+
+    <footer>
+       <address>
+        <strong>EasyShop - Online Shopping</strong><br>
+        33 Fricker Road<br>
+        Illovo, Johannesburg 2196<br>
+        <a href="mailto:info@easyshop.store">info@easyshop.store</a><br>
+        <a href="tel:+27114463800">(2711) 446-3800</a>
+    </address>
+
+    <div class="social">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img 
+          src="images/facebook.svg" 
+          alt="facebook" 
+          width="22" 
+          height="22" 
+          loading="lazy">
+      </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <img 
+          src="images/instagram.svg" 
+          alt="github" 
+          width="22" 
+          height="22" 
+          loading="lazy">
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <img 
+          src="images/twitter-x.svg" 
+          alt="linkedin" 
+          width="22" 
+          height="22" 
+          loading="lazy">
+      </a>
+    </div>
+    <div>
+      <p>WDD231 Class Project</p>
+      <p>Saidi Talatala</p>
+      <p>&copy;<span id="currentYear"></span> EasyShop - Online Shopping</p>
+      <p>Last Modified <span id="lastModified"></span></p>
+      <p><strong>My API video :<a href="https://app.screencastify.com/watch/FNtRnSFE6WSmfi2cCzrD">EasyShop</a></strong></p>
+
+    </div>
+    </footer>
 </body>
 </html>
