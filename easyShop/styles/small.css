@@ -62,6 +62,10 @@ header span {
   letter-spacing: 1px;
 }
 
+h1{
+  text-align: center;
+}
+
 /* Hamburger */
 .hamburger {
   background: none;
